@@ -1,7 +1,7 @@
 {
     "login": {
-        "login_label": "Login",
-        "register_label": "Register"
+        "login_label": "LOGIN",
+        "register_label": "REGISTER"
     },
     "splash_screen": {
         "user_title": "Pawel Czerwinski",

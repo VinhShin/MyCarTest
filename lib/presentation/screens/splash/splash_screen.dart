@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:my_car_test/common/assets/app_images.dart';
+import 'package:my_car_test/generated/locale_keys.g.dart';
 import 'package:my_car_test/presentation/custom_widget/button.dart';
 import 'package:my_car_test/presentation/screens/widgets/user_info.dart';
 
@@ -29,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   Expanded(
                     child: Button(
                       onPress: () {},
-                      text: "LOGIN",
+                      text: LocaleKeys.login_login_label.tr(),
                     ),
                   ),
                   SizedBox(
@@ -39,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     child: Button(
                       isOutline: false,
                       onPress: () {},
-                      text: "REGISTER",
+                      text: LocaleKeys.login_register_label.tr(),
                     ),
                   ),
                 ],
