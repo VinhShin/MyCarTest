@@ -11,6 +11,21 @@
         "password_input": "Enter password",
         "password_incorrect": "Your email or password incorrect"
     },
+    "register": {
+        "title": "Register",
+        "button": "SIGN UP",
+        "failure": "Ooh! Something went wrong.",
+        "email_input": "Enter email",
+        "password_input": "Enter password",
+        "confirm_password": "Confirm password",
+        "term_condition_desc": "By signing up, you agree to Photo’s <a href='https://github.com' style = 'color: black'><u>Terms of Service</u></a> and <a href='https://github.com' style = 'color: black'><u>Privacy Policy</u>.</a>"
+    },
+    "intro_screen": {
+        "login_label": "LOGIN",
+        "register_label": "REGISTER",
+        "user_title": "Pawel Czerwinski",
+        "user_desc": "@pawel_czerwinski"
+    },
     "splash_screen": {
         "user_title": "Pawel Czerwinski",
         "user_desc": "@pawel_czerwinski"

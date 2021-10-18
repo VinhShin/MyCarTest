@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:my_car_test/common/app_theme.dart';
 import 'package:my_car_test/common/contants/routes.dart';
 import 'package:my_car_test/presentation/screens/login/login_screen.dart';
+import 'package:my_car_test/presentation/screens/register/register_screen.dart';
 
 import 'presentation/screens/home/home_screen.dart';
 import 'presentation/screens/splash/splash_screen.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.splashScreen: (context) => const SplashScreen(),
         AppRoutes.homeScreen: (context) => const HomeScreen(),
         AppRoutes.loginScreen: (context) => const LoginScreen(),
+        AppRoutes.registerScreen: (context) => const RegisterScreen(),
       },
     );
   }

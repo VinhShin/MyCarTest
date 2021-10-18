@@ -43,7 +43,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   Expanded(
                     child: Button(
                       isOutline: false,
-                      onPress: () {},
+                      onPress: () {
+                        Navigator.pushNamed(context, AppRoutes.registerScreen);
+                      },
                       text: LocaleKeys.login_register_label.tr(),
                     ),
                   ),
