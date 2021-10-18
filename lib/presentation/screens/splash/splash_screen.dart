@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:my_car_test/common/assets/app_images.dart';
+import 'package:my_car_test/common/contants/routes.dart';
 import 'package:my_car_test/generated/locale_keys.g.dart';
 import 'package:my_car_test/presentation/custom_widget/button.dart';
-import 'package:my_car_test/presentation/screens/widgets/user_info.dart';
+import 'package:my_car_test/presentation/screens/splash/widgets/user_info.dart';
 
 class SplashScreen extends StatefulWidget {
-  SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -30,7 +31,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   Expanded(
                     child: Button(
-                      onPress: () {},
+                      onPress: () {
+                        Navigator.pushNamed(context, AppRoutes.loginScreen);
+                      },
                       text: LocaleKeys.login_login_label.tr(),
                     ),
                   ),

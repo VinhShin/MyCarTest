@@ -1,7 +1,15 @@
 {
+    "ok": "ok",
+    "cancel": "cancel",
+    "alert": "alert",
     "login": {
         "login_label": "LOGIN",
-        "register_label": "REGISTER"
+        "register_label": "REGISTER",
+        "login_title": "Log in",
+        "login_button": "LOG IN",
+        "email_input": "Enter email",
+        "password_input": "Enter password",
+        "password_incorrect": "Your email or password incorrect"
     },
     "splash_screen": {
         "user_title": "Pawel Czerwinski",

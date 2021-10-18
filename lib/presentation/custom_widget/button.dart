@@ -14,18 +14,22 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 52,
-      alignment: AlignmentDirectional.center,
-      decoration: BoxDecoration(
-          color: isOutline ? Colors.white : Colors.black,
-          borderRadius: BorderRadius.all(Radius.circular(6)),
-          border: Border.all(color: Colors.black)),
-      child: Text(
-        text,
-        style: TextStyle(
-            color: isOutline ? Colors.black : Colors.white,
-            fontWeight: FontWeight.bold),
+    return InkWell(
+      onTap: onPress,
+      child: Container(
+        height: 52,
+        alignment: AlignmentDirectional.center,
+        decoration: BoxDecoration(
+            color: isOutline ? Colors.white : Colors.black,
+            borderRadius: BorderRadius.all(Radius.circular(6)),
+            border: Border.all(color: Colors.black)),
+        child: Text(
+          text,
+          style: Theme.of(context)
+              .textTheme
+              .button
+              ?.copyWith(color: isOutline ? Colors.black : Colors.white),
+        ),
       ),
     );
   }
