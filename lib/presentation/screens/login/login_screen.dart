@@ -62,6 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onChanged: (password) {
                       this.password = password;
                     },
+                    obscureText: true,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: LocaleKeys.login_password_input.tr()),

@@ -25,5 +25,8 @@
         "register_label": "REGISTER",
         "user_title": "Pawel Czerwinski",
         "user_desc": "@pawel_czerwinski"
+    },
+    "home": {
+        "home_title": "Discover"
     }
 }
