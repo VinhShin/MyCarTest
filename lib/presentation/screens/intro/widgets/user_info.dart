@@ -12,10 +12,10 @@ class UserInfo extends StatelessWidget {
       Image.asset(AppImages.avatar),
       Column(children: [
         Text(
-          LocaleKeys.splash_screen_user_title.tr(),
+          LocaleKeys.intro_user_title.tr(),
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        Text(LocaleKeys.splash_screen_user_desc.tr()),
+        Text(LocaleKeys.intro_user_desc.tr()),
       ]),
     ]);
   }

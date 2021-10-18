@@ -2,11 +2,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_car_test/common/app_theme.dart';
 import 'package:my_car_test/common/contants/routes.dart';
+import 'package:my_car_test/presentation/screens/intro/intro_screen.dart';
 import 'package:my_car_test/presentation/screens/login/login_screen.dart';
 import 'package:my_car_test/presentation/screens/register/register_screen.dart';
 
 import 'presentation/screens/home/home_screen.dart';
-import 'presentation/screens/splash/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       theme: AppTheme.lightTheme,
       routes: {
-        AppRoutes.splashScreen: (context) => const SplashScreen(),
+        AppRoutes.introScreen: (context) => const IntroScreen(),
         AppRoutes.homeScreen: (context) => const HomeScreen(),
         AppRoutes.loginScreen: (context) => const LoginScreen(),
         AppRoutes.registerScreen: (context) => const RegisterScreen(),

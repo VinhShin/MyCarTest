@@ -4,16 +4,16 @@ import 'package:my_car_test/common/assets/app_images.dart';
 import 'package:my_car_test/common/contants/routes.dart';
 import 'package:my_car_test/generated/locale_keys.g.dart';
 import 'package:my_car_test/presentation/custom_widget/button.dart';
-import 'package:my_car_test/presentation/screens/splash/widgets/user_info.dart';
+import 'package:my_car_test/presentation/screens/intro/widgets/user_info.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+class IntroScreen extends StatefulWidget {
+  const IntroScreen({Key? key}) : super(key: key);
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _IntroScreenState createState() => _IntroScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       onPress: () {
                         Navigator.pushNamed(context, AppRoutes.loginScreen);
                       },
-                      text: LocaleKeys.login_login_label.tr(),
+                      text: LocaleKeys.intro_login_label.tr(),
                     ),
                   ),
                   SizedBox(
@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       onPress: () {
                         Navigator.pushNamed(context, AppRoutes.registerScreen);
                       },
-                      text: LocaleKeys.login_register_label.tr(),
+                      text: LocaleKeys.intro_register_label.tr(),
                     ),
                   ),
                 ],
