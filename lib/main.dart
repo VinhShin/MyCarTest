@@ -13,7 +13,6 @@ void main() async {
         path: 'assets/languages',
         child: MyApp()),
   );
-  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -22,9 +21,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My Car Test',
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      // routes: {
+      //   // When navigating to the "/" route, build the FirstScreen widget.
+      //   '/': (context) => const LoginScreen(),
+      //   // When navigating to the "/second" route, build the SecondScreen widget.
+      //   PBRouter.homeScreen: (context) => const HomeScreen(),
+      //   PBRouter.photoScreen: (context) => const PhotoScreen(),
+      // },
       home: SplashScreen(),
     );
   }
