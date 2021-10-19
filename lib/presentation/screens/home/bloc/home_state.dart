@@ -1,6 +1,13 @@
-abstract class HomeState {}
+enum HomePageIndex { home, search, add, comment, profile }
 
-class HomeInitState extends HomeState {}
+abstract class HomeState {
+  HomeState();
+}
+
+class HomePageState extends HomeState {
+  var page;
+  HomePageState({required this.page});
+}
 
 class HomeLoadingState extends HomeState {}
 

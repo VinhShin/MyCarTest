@@ -13,7 +13,10 @@ class UserInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(children: [
       Image.asset(AppImages.avatar),
-      Column(children: [
+      SizedBox(
+        width: 4,
+      ),
+      Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(
           userName,
           style: TextStyle(fontWeight: FontWeight.bold),

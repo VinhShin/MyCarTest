@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:my_car_test/common/assets/app_images.dart';
-import 'package:my_car_test/generated/locale_keys.g.dart';
-import 'package:my_car_test/presentation/custom_widget/button.dart';
 import 'package:my_car_test/presentation/custom_widget/full_loading.dart';
-import 'package:my_car_test/presentation/custom_widget/user_info.dart';
+import 'package:my_car_test/presentation/screens/home/bloc/home_event.dart';
+import 'package:my_car_test/presentation/screens/home/widgets/home_bottom_bar.dart';
 import 'package:my_car_test/presentation/screens/home/bloc/home_bloc.dart';
 import 'package:my_car_test/presentation/screens/home/bloc/home_state.dart';
-import 'package:my_car_test/presentation/screens/home/widgets/browse_content.dart';
+import 'package:my_car_test/presentation/screens/home/pages/comment_page.dart';
+import 'package:my_car_test/presentation/screens/home/pages/profile_page.dart';
+import 'package:my_car_test/presentation/screens/home/pages/search_page.dart';
 
-import 'bloc/home_event.dart';
+import 'pages/home_page.dart';
 
 enum HomePart { header, content, loadMore }
 
@@ -22,8 +21,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final items = [HomePart.header, HomePart.content, HomePart.loadMore];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,62 +30,29 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             SafeArea(
               child: Padding(
-                padding: EdgeInsets.all(20),
-                child: CustomScrollView(slivers: [
-                  SliverList(
-                      delegate: SliverChildBuilderDelegate((context, index) {
-                    switch (items[index]) {
-                      case HomePart.header:
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              LocaleKeys.home_home_title.tr(),
-                              style: Theme.of(context).textTheme.headline1,
-                            ),
-                            SizedBox(height: 32),
-                            Text(
-                              LocaleKeys.home_what_is_new_today.tr(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText1
-                                  ?.copyWith(fontWeight: FontWeight.w900),
-                            ),
-                            SizedBox(height: 24),
-                            Image.asset(AppImages.imageTemp1),
-                            SizedBox(height: 16),
-                            UserInfo(
-                                userName: LocaleKeys.home_user_name,
-                                userDescription: LocaleKeys.home_user_desc),
-                            SizedBox(height: 48),
-                            Text(
-                              LocaleKeys.home_browser_all.tr(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText1
-                                  ?.copyWith(fontWeight: FontWeight.w900),
-                            ),
-                            SizedBox(height: 24),
-                          ],
-                        );
-
-                      case HomePart.content:
-                        return BrowseAllContent();
+                padding:
+                    EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 70),
+                child: BlocBuilder<HomeBloc, HomeState>(
+                    buildWhen: (oldState, newState) {
+                  return newState is HomePageState;
+                }, builder: (context, state) {
+                  if (state is HomePageState) {
+                    switch (state.page) {
+                      case HomePageIndex.home:
+                        return HomePage();
+                      case HomePageIndex.search:
+                        return SearchPage();
+                      case HomePageIndex.comment:
+                        return CommentPage();
                       default:
-                        return Padding(
-                            padding: const EdgeInsets.only(top: 32),
-                            child: Button(
-                                text: LocaleKeys.home_see_more.tr(),
-                                onPress: () {
-                                  context
-                                      .read<HomeBloc>()
-                                      .add(HomeLoadMoreEvent());
-                                }));
+                        return ProfilePage();
                     }
-                  }, childCount: items.length))
-                ]),
+                  }
+                  return Container();
+                }),
               ),
             ),
+            HomeBottomBar(),
             BlocBuilder<HomeBloc, HomeState>(builder: (context, state) {
               if (state is HomeLoadingState) {
                 return FullLoading(true);
