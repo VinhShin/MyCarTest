@@ -50,7 +50,9 @@ class _HomePageState extends State<HomePage> {
                       ?.copyWith(fontWeight: FontWeight.w900),
                 ),
                 SizedBox(height: 24),
-                Image.asset(AppImages.imageTemp1),
+                Align(
+                    alignment: AlignmentDirectional.center,
+                    child: Image.asset(AppImages.imageTemp1)),
                 SizedBox(height: 16),
                 UserInfo(
                     userName: LocaleKeys.home_user_name.tr(),
