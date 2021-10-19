@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:my_car_test/common/assets/app_images.dart';
-import 'package:my_car_test/data/template_data.dart';
 import 'package:my_car_test/generated/locale_keys.g.dart';
 import 'package:my_car_test/presentation/custom_widget/button.dart';
+import 'package:my_car_test/presentation/custom_widget/full_loading.dart';
 import 'package:my_car_test/presentation/custom_widget/user_info.dart';
 import 'package:my_car_test/presentation/screens/home/bloc/home_bloc.dart';
 import 'package:my_car_test/presentation/screens/home/bloc/home_state.dart';
 import 'package:my_car_test/presentation/screens/home/widgets/browse_content.dart';
+
+import 'bloc/home_event.dart';
 
 enum HomePart { header, content, loadMore }
 
@@ -26,14 +27,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: BlocProvider(
-          create: (_) => HomeBloc(),
-          child: BlocConsumer<HomeBloc, HomeState>(
-            listener: (context, state) {},
-            buildWhen: (context, state) => false,
-            builder: (context, state) {
-              return Padding(
+      body: BlocProvider(
+        create: (_) => HomeBloc(),
+        child: Stack(
+          children: [
+            SafeArea(
+              child: Padding(
                 padding: EdgeInsets.all(20),
                 child: CustomScrollView(slivers: [
                   SliverList(
@@ -77,18 +76,26 @@ class _HomeScreenState extends State<HomeScreen> {
                         return BrowseAllContent();
                       default:
                         return Padding(
-                          padding: const EdgeInsets.only(top: 32),
-                          child: Button(
-                            text: LocaleKeys.home_see_more.tr(),
-                            onPress: () {},
-                          ),
-                        );
+                            padding: const EdgeInsets.only(top: 32),
+                            child: Button(
+                                text: LocaleKeys.home_see_more.tr(),
+                                onPress: () {
+                                  context
+                                      .read<HomeBloc>()
+                                      .add(HomeLoadMoreEvent());
+                                }));
                     }
                   }, childCount: items.length))
                 ]),
-              );
-            },
-          ),
+              ),
+            ),
+            BlocBuilder<HomeBloc, HomeState>(builder: (context, state) {
+              if (state is HomeLoadingState) {
+                return FullLoading(true);
+              }
+              return Container();
+            })
+          ],
         ),
       ),
     );
