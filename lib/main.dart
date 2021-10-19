@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       routes: {
         AppRoutes.introScreen: (context) => const IntroScreen(),
         AppRoutes.homeScreen: (context) => const HomeScreen(),

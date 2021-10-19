@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SafeArea(
               child: Padding(
                 padding:
-                    EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 70),
+                    EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 80),
                 child: BlocBuilder<HomeBloc, HomeState>(
                     buildWhen: (oldState, newState) {
                   return newState is HomePageState;
