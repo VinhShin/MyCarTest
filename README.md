@@ -17,3 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 
 # Setup (Mac OS)
 1. run command line : sh lang_generator.sh
+
+# Demo
+![Alt Text](https://yongquan.s3.ap-southeast-1.amazonaws.com/demo.gif)
+
