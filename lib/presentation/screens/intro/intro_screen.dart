@@ -4,7 +4,7 @@ import 'package:my_car_test/common/assets/app_images.dart';
 import 'package:my_car_test/common/contants/routes.dart';
 import 'package:my_car_test/generated/locale_keys.g.dart';
 import 'package:my_car_test/presentation/custom_widget/button.dart';
-import 'package:my_car_test/presentation/screens/intro/widgets/user_info.dart';
+import 'package:my_car_test/presentation/custom_widget/user_info.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -24,7 +24,10 @@ class _IntroScreenState extends State<IntroScreen> {
         child: Column(
           children: [
             Expanded(child: Image.asset(AppImages.logo)),
-            UserInfo(),
+            UserInfo(
+              userName: LocaleKeys.intro_user_title.tr(),
+              userDescription: LocaleKeys.intro_user_desc.tr(),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: Row(

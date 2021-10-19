@@ -25,7 +25,7 @@ class AppTheme {
 
   static final textTheme = const TextTheme(
     headline1: TextStyle(fontSize: 36.0, fontWeight: FontWeight.w400),
-    bodyText1: TextStyle(fontSize: 36.0, fontWeight: FontWeight.w400),
+    bodyText1: TextStyle(fontSize: 13.0, fontWeight: FontWeight.w400),
     button: TextStyle(fontSize: 13.0, fontWeight: FontWeight.w900),
   );
 }

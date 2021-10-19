@@ -1,6 +1,37 @@
 {
-    "splash_screen": {
+    "ok": "ok",
+    "cancel": "cancel",
+    "alert": "alert",
+    "login": {
+        "login_label": "LOGIN",
+        "register_label": "REGISTER",
+        "login_title": "Log in",
+        "login_button": "LOG IN",
+        "email_input": "Enter email",
+        "password_input": "Enter password",
+        "password_incorrect": "Your email or password incorrect"
+    },
+    "register": {
+        "title": "Register",
+        "button": "SIGN UP",
+        "failure": "Ooh! Something went wrong.",
+        "email_input": "Enter email",
+        "password_input": "Enter password",
+        "confirm_password": "Confirm password",
+        "term_condition_desc": "By signing up, you agree to Photo’s <a href='https://github.com' style = 'color: black'><u>Terms of Service</u></a> and <a href='https://github.com' style = 'color: black'><u>Privacy Policy</u>.</a>"
+    },
+    "intro": {
+        "login_label": "LOGIN",
+        "register_label": "REGISTER",
         "user_title": "Pawel Czerwinski",
         "user_desc": "@pawel_czerwinski"
+    },
+    "home": {
+        "home_title": "Discover",
+        "user_name" : "Ridhwan Nordin",
+        "user_desc" : "@ridzjcob",
+        "what_is_new_today": "WHAT'S NEW TODAY",
+        "browser_all": "BROWSE ALL",
+        "see_more": "SEE MORE"
     }
 }

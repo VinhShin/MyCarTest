@@ -27,6 +27,11 @@
         "user_desc": "@pawel_czerwinski"
     },
     "home": {
-        "home_title": "Discover"
+        "home_title": "Discover",
+        "user_name" : "Ridhwan Nordin",
+        "user_desc" : "@ridzjcob",
+        "what_is_new_today": "WHAT'S NEW TODAY",
+        "browser_all": "BROWSE ALL",
+        "see_more": "SEE MORE"
     }
 }

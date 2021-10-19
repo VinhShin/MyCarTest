@@ -12,5 +12,5 @@ class AppImages {
   static final imageTemp8 = 'assets/images/image_8.png';
   static final imageTemp9 = 'assets/images/image_9.png';
   static final imageTemp10 = 'assets/images/image_10.png';
-  static final imageTemp11 = 'assets/images/image_111.png';
+  static final imageTemp11 = 'assets/images/image_11.png';
 }
