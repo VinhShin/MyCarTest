@@ -20,7 +20,8 @@ class _IntroScreenState extends State<IntroScreen> {
       body: Container(
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-            image: DecorationImage(image: Image.asset(AppImages.splash).image)),
+            image: DecorationImage(
+                image: Image.asset(AppImages.splash).image, fit: BoxFit.fill)),
         child: Column(
           children: [
             Expanded(child: Image.asset(AppImages.logo)),

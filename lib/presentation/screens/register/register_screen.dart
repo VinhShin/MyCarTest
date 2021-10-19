@@ -45,62 +45,64 @@ class _RegisterScreenState extends State<RegisterScreen> {
           builder: (context, state) {
             return Padding(
               padding: EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    LocaleKeys.register_title.tr(),
-                    style: Theme.of(context).textTheme.headline1,
-                  ),
-                  SizedBox(height: 32),
-                  TextField(
-                    onChanged: (email) {
-                      this.email = email;
-                    },
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: LocaleKeys.register_email_input.tr()),
-                  ),
-                  SizedBox(height: 16),
-                  TextField(
-                    onChanged: (password) {
-                      this.password = password;
-                    },
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: LocaleKeys.register_password_input.tr()),
-                  ),
-                  SizedBox(height: 16),
-                  TextField(
-                    onChanged: (confirmPassword) {
-                      this.confirmPassword = confirmPassword;
-                    },
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: LocaleKeys.register_confirm_password.tr()),
-                  ),
-                  SizedBox(height: 16),
-                  Button(
-                      isOutline: false,
-                      onPress: () {
-                        context.read<RegisterBloc>().add(OnRegisterEvent(
-                            email: email,
-                            password: password,
-                            confirmPassword: confirmPassword));
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      LocaleKeys.register_title.tr(),
+                      style: Theme.of(context).textTheme.headline1,
+                    ),
+                    SizedBox(height: 32),
+                    TextField(
+                      onChanged: (email) {
+                        this.email = email;
                       },
-                      text: LocaleKeys.register_button.tr()),
-                  SizedBox(height: 40),
-                  Html(
-                      data: LocaleKeys.register_term_condition_desc.tr(),
-                      onLinkTap: (String? url, RenderContext context,
-                          Map<String, String> attributes, element) async {
-                        if (url != null && await canLaunch(url)) {
-                          await launch(url);
-                        }
-                      }),
-                ],
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: LocaleKeys.register_email_input.tr()),
+                    ),
+                    SizedBox(height: 16),
+                    TextField(
+                      onChanged: (password) {
+                        this.password = password;
+                      },
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: LocaleKeys.register_password_input.tr()),
+                    ),
+                    SizedBox(height: 16),
+                    TextField(
+                      onChanged: (confirmPassword) {
+                        this.confirmPassword = confirmPassword;
+                      },
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: LocaleKeys.register_confirm_password.tr()),
+                    ),
+                    SizedBox(height: 16),
+                    Button(
+                        isOutline: false,
+                        onPress: () {
+                          context.read<RegisterBloc>().add(OnRegisterEvent(
+                              email: email,
+                              password: password,
+                              confirmPassword: confirmPassword));
+                        },
+                        text: LocaleKeys.register_button.tr()),
+                    SizedBox(height: 40),
+                    Html(
+                        data: LocaleKeys.register_term_condition_desc.tr(),
+                        onLinkTap: (String? url, RenderContext context,
+                            Map<String, String> attributes, element) async {
+                          if (url != null && await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        }),
+                  ],
+                ),
               ),
             );
           },
