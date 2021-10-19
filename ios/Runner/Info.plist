@@ -44,12 +44,12 @@
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>
-		<string>nb</string>
+		<string>vi</string>
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-	<string>https</string>
-	<string>http</string>
+		<string>https</string>
+		<string>http</string>
 	</array>
 </dict>
 </plist>

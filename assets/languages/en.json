@@ -3,8 +3,6 @@
     "cancel": "cancel",
     "alert": "alert",
     "login": {
-        "login_label": "LOGIN",
-        "register_label": "REGISTER",
         "login_title": "Log in",
         "login_button": "LOG IN",
         "email_input": "Enter email",

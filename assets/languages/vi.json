@@ -1,0 +1,35 @@
+{
+    "ok": "ok",
+    "cancel": "hủy",
+    "alert": "Thông báo",
+    "login": {
+        "login_title": "Đăng nhập",
+        "login_button": "ĐĂNG NHẬP",
+        "email_input": "Nhập email",
+        "password_input": "Nhập mật khẩu",
+        "password_incorrect": "Email hoặc mật khẩu của bạn không đúng!"
+    },
+    "register": {
+        "title": "Đăng ký",
+        "button": "ĐĂNG KÝ",
+        "failure": "Ooh! Có gì đó sai sai.",
+        "email_input": "Nhập email",
+        "password_input": "Nhập mật khẩu",
+        "confirm_password": "xác nhận lại mật khẩu",
+        "term_condition_desc": "By signing up, you agree to Photo’s <a href='https://github.com' style = 'color: black'><u>Terms of Service</u></a> and <a href='https://github.com' style = 'color: black'><u>Privacy Policy</u>.</a>"
+    },
+    "intro": {
+        "login_label": "ĐĂNG NHẬP",
+        "register_label": "ĐĂNG KÝ",
+        "user_title": "Pawel Czerwinski",
+        "user_desc": "@pawel_czerwinski"
+    },
+    "home": {
+        "home_title": "Khám phá",
+        "user_name" : "Ridhwan Nordin",
+        "user_desc" : "@ridzjcob",
+        "what_is_new_today": "MỚI HÔM NAY",
+        "browser_all": "TẤT CẢ",
+        "see_more": "XEM THÊM"
+    }
+}
