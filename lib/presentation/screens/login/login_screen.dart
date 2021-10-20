@@ -9,6 +9,7 @@ import '/common/contants/routes.dart';
 import '/generated/locale_keys.g.dart';
 import '/presentation/base_widget/m_app_bar.dart';
 import '/presentation/custom_widget/button.dart';
+import '/presentation/base_widget/m_text_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -49,23 +50,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: Theme.of(context).textTheme.headline1,
                   ),
                   SizedBox(height: 32),
-                  TextField(
+                  MTextField(
+                    hint: LocaleKeys.login_email_input.tr(),
                     onChanged: (email) {
                       this.email = email;
                     },
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: LocaleKeys.login_email_input.tr()),
                   ),
                   SizedBox(height: 16),
-                  TextField(
+                  MTextField(
+                    obscureText: true,
+                    hint: LocaleKeys.login_password_input.tr(),
                     onChanged: (password) {
                       this.password = password;
                     },
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: LocaleKeys.login_password_input.tr()),
                   ),
                   SizedBox(height: 16),
                   Button(

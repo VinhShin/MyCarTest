@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:my_car_test/presentation/base_widget/m_text_field.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/flutter_html.dart';
@@ -54,33 +55,27 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       style: Theme.of(context).textTheme.headline1,
                     ),
                     SizedBox(height: 32),
-                    TextField(
+                    MTextField(
+                      hint: LocaleKeys.register_email_input.tr(),
                       onChanged: (email) {
                         this.email = email;
                       },
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: LocaleKeys.register_email_input.tr()),
                     ),
                     SizedBox(height: 16),
-                    TextField(
+                    MTextField(
+                      obscureText: true,
+                      hint: LocaleKeys.register_password_input.tr(),
                       onChanged: (password) {
                         this.password = password;
                       },
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: LocaleKeys.register_password_input.tr()),
                     ),
                     SizedBox(height: 16),
-                    TextField(
+                    MTextField(
+                      obscureText: true,
+                      hint: LocaleKeys.register_confirm_password.tr(),
                       onChanged: (confirmPassword) {
                         this.confirmPassword = confirmPassword;
                       },
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: LocaleKeys.register_confirm_password.tr()),
                     ),
                     SizedBox(height: 16),
                     Button(

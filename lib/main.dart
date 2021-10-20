@@ -20,7 +20,7 @@ void main() async {
   runApp(
     EasyLocalization(
         supportedLocales: [Locale('en', 'US'), Locale('vi', 'VN')],
-        fallbackLocale: Locale('en', 'US'),
+        fallbackLocale: Locale('vi', 'VN'),
         path: 'assets/languages',
         child: MyApp()),
   );
