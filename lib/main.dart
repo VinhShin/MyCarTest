@@ -2,29 +2,31 @@ import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:my_car_test/common/app_theme.dart';
-import 'package:my_car_test/common/contants/routes.dart';
-import 'package:my_car_test/presentation/screens/intro/intro_screen.dart';
-import 'package:my_car_test/presentation/screens/login/login_screen.dart';
-import 'package:my_car_test/presentation/screens/register/register_screen.dart';
 
+import 'common/app_theme.dart';
+import 'common/contants/routes.dart';
 import 'presentation/screens/home/home_screen.dart';
+import 'presentation/screens/intro/intro_screen.dart';
+import 'presentation/screens/login/login_screen.dart';
+import 'presentation/screens/register/register_screen.dart';
 
 void main() async {
+  while (Platform.localeName == null) {
+    await Future.delayed(const Duration(microseconds: 300), () {});
+  }
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+
   runApp(
     EasyLocalization(
-        supportedLocales: [Locale('en', ''), Locale('vi', '')],
-        fallbackLocale: Locale('vi', ''),
+        supportedLocales: [Locale('en', 'US'), Locale('vi', 'VN')],
+        fallbackLocale: Locale('en', 'US'),
         path: 'assets/languages',
-        useOnlyLangCode: true,
         child: MyApp()),
   );
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

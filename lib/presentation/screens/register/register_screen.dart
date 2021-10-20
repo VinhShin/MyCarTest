@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:my_car_test/common/contants/routes.dart';
-import 'package:my_car_test/generated/locale_keys.g.dart';
-import 'package:my_car_test/presentation/base_widget/m_app_bar.dart';
-import 'package:my_car_test/presentation/custom_widget/button.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'bloc/register_bloc.dart';
 import 'bloc/register_event.dart';
 import 'bloc/register_state.dart';
+import '/common/contants/routes.dart';
+import '/generated/locale_keys.g.dart';
+import '/presentation/base_widget/m_app_bar.dart';
+import '/presentation/custom_widget/button.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);

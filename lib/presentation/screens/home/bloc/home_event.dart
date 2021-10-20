@@ -1,4 +1,4 @@
-import 'package:my_car_test/presentation/screens/home/bloc/home_state.dart';
+import '/presentation/screens/home/bloc/home_state.dart';
 
 abstract class HomeEvent {}
 

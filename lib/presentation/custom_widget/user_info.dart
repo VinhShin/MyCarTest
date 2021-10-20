@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_car_test/common/assets/app_images.dart';
+
+import '/common/assets/app_images.dart';
 
 class UserInfo extends StatelessWidget {
   final userName;

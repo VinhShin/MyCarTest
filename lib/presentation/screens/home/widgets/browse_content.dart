@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_bloc.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_state.dart';
+
+import '../bloc/home_bloc.dart';
+import '../bloc/home_state.dart';
 
 class BrowseAllContent extends StatelessWidget {
   const BrowseAllContent({Key? key}) : super(key: key);

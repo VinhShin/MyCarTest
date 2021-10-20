@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:my_car_test/common/assets/app_images.dart';
-import 'package:my_car_test/generated/locale_keys.g.dart';
-import 'package:my_car_test/presentation/custom_widget/button.dart';
-import 'package:my_car_test/presentation/custom_widget/user_info.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_bloc.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_event.dart';
-import 'package:my_car_test/presentation/screens/home/widgets/browse_content.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '/common/assets/app_images.dart';
+import '/generated/locale_keys.g.dart';
+import '/presentation/custom_widget/button.dart';
+import '/presentation/custom_widget/user_info.dart';
+import '../bloc/home_bloc.dart';
+import '../bloc/home_event.dart';
+import '../widgets/browse_content.dart';
 import '../home_screen.dart';
 
 class HomePage extends StatefulWidget {

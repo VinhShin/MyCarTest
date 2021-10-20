@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_car_test/common/assets/app_icons.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_bloc.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_event.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_state.dart';
+
+import '/presentation/screens/home/bloc/home_bloc.dart';
+import '/presentation/screens/home/bloc/home_event.dart';
+import '/presentation/screens/home/bloc/home_state.dart';
+import '/common/assets/app_icons.dart';
 
 class HomeBottomBar extends StatelessWidget {
   const HomeBottomBar({Key? key}) : super(key: key);

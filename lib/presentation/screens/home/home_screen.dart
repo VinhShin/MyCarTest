@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:my_car_test/presentation/custom_widget/full_loading.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_event.dart';
-import 'package:my_car_test/presentation/screens/home/widgets/home_bottom_bar.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_bloc.dart';
-import 'package:my_car_test/presentation/screens/home/bloc/home_state.dart';
-import 'package:my_car_test/presentation/screens/home/pages/comment_page.dart';
-import 'package:my_car_test/presentation/screens/home/pages/profile_page.dart';
-import 'package:my_car_test/presentation/screens/home/pages/search_page.dart';
 
+import '/presentation/custom_widget/full_loading.dart';
+import 'widgets/home_bottom_bar.dart';
+import 'bloc/home_bloc.dart';
+import 'bloc/home_state.dart';
+import 'pages/comment_page.dart';
+import 'pages/profile_page.dart';
+import 'pages/search_page.dart';
 import 'pages/home_page.dart';
 
 enum HomePart { header, content, loadMore }

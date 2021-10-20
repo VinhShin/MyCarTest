@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:my_car_test/common/assets/app_images.dart';
-import 'package:my_car_test/common/contants/routes.dart';
-import 'package:my_car_test/generated/locale_keys.g.dart';
-import 'package:my_car_test/presentation/custom_widget/button.dart';
-import 'package:my_car_test/presentation/custom_widget/user_info.dart';
+
+import '/common/assets/app_images.dart';
+import '/common/contants/routes.dart';
+import '/generated/locale_keys.g.dart';
+import '/presentation/custom_widget/button.dart';
+import '/presentation/custom_widget/user_info.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({Key? key}) : super(key: key);
