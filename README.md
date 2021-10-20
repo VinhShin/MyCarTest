@@ -1,23 +1,14 @@
-# my_car_test
+## my_car_test
 
-A new Flutter project.
+A Interview Project Test.
 
-## Getting Started
+## Start Setup (Mac OS)
+=> run command line : sh lang_generator.sh to generate localkey.g.dart
 
-This project is a starting point for a Flutter application.
+## Note Localization and DarkMode
+=> Will be applied depend on device setting (Language, DarkMode || LightMode)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-# Setup (Mac OS)
-1. run command line : sh lang_generator.sh
-
-# Demo
+## Demo
 ![Alt Text](demo.gif)
 
+### No matter how the result, I will be very happy if receive feedback about this project from you, thanks
