@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +9,6 @@ import 'presentation/screens/login/login_screen.dart';
 import 'presentation/screens/register/register_screen.dart';
 
 void main() async {
-  while (Platform.localeName == null) {
-    await Future.delayed(const Duration(microseconds: 300), () {});
-  }
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
